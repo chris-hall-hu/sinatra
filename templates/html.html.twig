@@ -44,26 +44,26 @@
         {{ scripts }}
       {% endblock %}
     </head>
-  {% endblock %}
+  {% endblock head %}
   {% block body %}
     <body{{ attributes }}>
       {% block skip_content %}
         <a href="#main-content" class="visually-hidden focusable">
           {{ 'Skip to main content'|t }}
         </a>
-      {% endblock %}
+      {% endblock skip_content %}
       {% block page_top %}
         {{ page_top }}
-      {% endblock %}
+      {% endblock page_top %}
       {% block page %}
         {{ page }}
-      {% endblock %}
+      {% endblock page %}
       {% block page_bottom %}
         {{ page_bottom }}
-      {% endblock %}
+      {% endblock page_bottom %}
       {% block scripts_bottom %}
         {{ scripts_bottom }}
-      {% endblock %}
+      {% endblock scripts_bottom %}
     </body>
-  {% endblock %}
+  {% endblock body %}
 </html>
