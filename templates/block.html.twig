@@ -36,17 +36,20 @@
 #}
 {% block block_full %}
 <div{{ attributes }}>
+
   {% block full_title %}
-  {{ title_prefix }}
-    {% block label %}
-      {% if label %}
-        <h2{{ title_attributes }}>{{ label }}</h2>
-      {% endif %}
-    {% endblock label %}
+    {{ title_prefix }}
+      {% block label %}
+        {% if label %}
+          <h2{{ title_attributes }}>{{ label }}</h2>
+        {% endif %}
+      {% endblock label %}
     {{ title_suffix }}
   {% endblock full_title %}
+  
   {% block content %}
     {{ content }}
   {% endblock content %}
+  
 </div>
 {% endblock block_full %}
