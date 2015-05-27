@@ -3,7 +3,7 @@ A learning experiment for themeing Drupal 8.
 
 Sinatra is intended to be used as a parent theme, for themes that want to drop most of the Drupalness (whatever remains), and get away from the override everything in a template approach. **This play theme will become a lot more mature in the coming weeks** I also want to experiment with includes (especially dynamic) and embeds in Twig. It should be possible to approach Drupal themes in ways not yet seen via Twig and possibly adapt to Workflows already in use for your other Twig based (or Twig like projects). 
 
-Note: I am using this as a base theme for [Bootrun](https://github.com/chris-hall-hu/bootrun) already which is already being used on my (Running on Drupal 8 blog)[http://running-on-drupal8.co.uk].
+Note: I am using this as a base theme for [Bootrun](https://github.com/chris-hall-hu/bootrun) already which is already being used on my [Running on Drupal 8 blog](http://running-on-drupal8.co.uk).
 
 For now it is play, and possilby something useful to look at for those doing something related. Depending
 how Drupal finishes up it may become something more solid.
