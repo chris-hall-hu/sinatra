@@ -1,5 +1,5 @@
 #Introduction
-A learning experiment for themeing Drupal 8.
+A learning experiment for theming Drupal 8.
 
 Sinatra is intended to be used as a parent theme, for themes that want to drop most of the Drupalness (whatever remains), and get away from the override everything in a template approach. **This play theme will become a lot more mature in the coming weeks** I also want to experiment with includes (especially dynamic) and embeds in Twig. It should be possible to approach Drupal themes in ways not yet seen via Twig and possibly adapt to Workflows already in use for your other Twig based (or Twig like projects). 
 
