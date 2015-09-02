@@ -32,41 +32,56 @@
 #}
 <!DOCTYPE html>
 <html{{ html_attributes }}>
+
   {% block head %}
     <head>
+    
       {% block head_content %}
         {{ head }}
+        
         {% block head_title %}
           <title>{{ head_title|safe_join(' | ') }}</title>
         {% endblock head_title %}
+        
         {% block styles %}
           {{ styles }}
-        {% endblock styles}
-        {% block scripts}
+        {% endblock styles %}
+        
+        {% block scripts %}
           {{ scripts }}
-        {% endblock scripts}
+        {% endblock scripts %}
+        
       {% endblock head_content %}
+      
     </head>
   {% endblock head %}
+  
   {% block body %}
     <body{{ attributes }}>
+    
       {% block skip_content %}
         <a href="#main-content" class="visually-hidden focusable">
           {{ 'Skip to main content'|t }}
         </a>
       {% endblock skip_content %}
+      
       {% block page_top %}
         {{ page_top }}
       {% endblock page_top %}
+      
       {% block page %}
         {{ page }}
       {% endblock page %}
+      
       {% block page_bottom %}
         {{ page_bottom }}
       {% endblock page_bottom %}
+      
       {% block scripts_bottom %}
         {{ scripts_bottom }}
       {% endblock scripts_bottom %}
+      
     </body>
   {% endblock body %}
+  
 </html>
