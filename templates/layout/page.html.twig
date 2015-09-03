@@ -69,25 +69,31 @@
         </a>
       {% endif %}
 
-      {% if site_name or site_slogan %}
-        <div class="name-and-slogan">
+      {% block site_name_slogan %} 
+        {% if site_name or site_slogan %}
+          <div class="name-and-slogan">
 
-          {# Use h1 when the content title is empty #}
-          {% if title %}
-            <strong class="site-name">
-              <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-            </strong>
-          {% else %}
-            <h1 class="site-name">
-              <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-            </h1>
-          {% endif %}
+            {% block title %}
+              {# Use h1 when the content title is empty #}
+              {% if title %}
+                <strong class="site-name">
+                  <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+                </strong>
+              {% else %}
+                <h1 class="site-name">
+                  <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+                </h1>
+              {% endif %}
+            {% endblock title %}
 
-          {% if site_slogan %}
-            <div class="site-slogan">{{ site_slogan }}</div>
-          {% endif %}
-        </div>{# ./name-and-slogan #}
-      {% endif %}
+            {% block site_slogan %}
+              {% if site_slogan %}
+                <div class="site-slogan">{{ site_slogan }}</div>
+              {% endif %}
+            {% endblock site_slogan %}
+          </div>{# ./name-and-slogan #}
+        {% endif %}
+      {% endblock site_name_slogan %}
 
       {{ page.header }}
     </header>
