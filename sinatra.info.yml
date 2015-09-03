@@ -2,7 +2,8 @@ name: Sinatra
 type: theme
 description: 'A theme designed to be extended by other themes that want to leave the beaten path'
 package: Core
-version: '8.0.0-beta7'
+version: VERSION
 core: 8.x
+
 libraries:
   - sinatra/global-styling
