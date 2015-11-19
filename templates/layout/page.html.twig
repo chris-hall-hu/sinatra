@@ -26,16 +26,7 @@
  *   slogan has been disabled in theme settings.
  *
  * Page content (in order of occurrence in the default page.html.twig):
- * - title_prefix: Additional output populated by modules, intended to be
- *   displayed in front of the main title tag that appears in the template.
- * - title: The page title, for use in the actual content.
- * - title_suffix: Additional output populated by modules, intended to be
- *   displayed after the main title tag that appears in the template.
  * - messages: Status and error messages. Should be displayed prominently.
- * - tabs: Tabs linking to any sub-pages beneath the current page (e.g., the
- *   view and edit tabs when displaying a node).
- * - action_links: Actions local to the page, such as "Add menu" on the menu
- *   administration interface.
  * - node: Fully loaded node, if there is an automatically-loaded node
  *   associated with the page and the node ID is the second argument in the
  *   page's path (e.g. node/12345 and node/12345/revisions, but not
@@ -61,7 +52,7 @@
 #}
 <div class="layout-container">
 
-  {% block header %} 
+  {% block header %}
     <header role="banner">
       {% if logo %}
         <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
@@ -69,7 +60,7 @@
         </a>
       {% endif %}
 
-      {% block site_name_slogan %} 
+      {% block site_name_slogan %}
         {% if site_name or site_slogan %}
           <div class="name-and-slogan">
 
@@ -102,11 +93,10 @@
   {% block primary_menu %}
     {{ page.primary_menu }}
   {% endblock primary_menu %}
-
   {% block secondary_menu %}
     {{ page.secondary_menu }}
   {% endblock secondary_menu %}
-  
+
   {% block breadcrumb %}
     {{ page.breadcrumb }}
   {% endblock breadcrumb %}
@@ -125,30 +115,8 @@
 
       {% block layout_content %}
         <div class="layout-content">
-
-          {% block title %}
-            {{ title_prefix }}
-            {% if title %}
-              <h1>{{ title }}</h1>
-            {% endif %}
-            {{ title_suffix }}
-          {% endblock title %}
-
-          {% block tabs %}
-            {{ tabs }}
-          {% endblock tabs %}
-
-          {% block action_links %}
-            {% if action_links %}
-              <nav class="action-links">{{ action_links }}</nav>
-            {% endif %}
-          {% endblock action_links %}
-
-          {% block content %}
-            {{ page.content }}
-          {% endblock content %}
-            
-        </div>
+          {{ page.content }}
+        </div>{# /.layout-content #}
       {% endblock layout_content %}
 
       {% block sidebar_first %}
@@ -178,4 +146,4 @@
     {% endif %}
   {% endblock footer %}
 
-</div>
+</div>{# /.layout-container #}
